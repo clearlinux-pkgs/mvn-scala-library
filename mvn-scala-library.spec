@@ -4,14 +4,23 @@
 #
 Name     : mvn-scala-library
 Version  : 1
-Release  : 1
+Release  : 2
 URL      : https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
 Source0  : https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
-Source1  : https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.pom
-Source2  : https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.12.0/scala-library-2.12.0.jar
-Source3  : https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.12.0/scala-library-2.12.0.pom
-Source4  : https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.12.7/scala-library-2.12.7.jar
-Source5  : https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.12.7/scala-library-2.12.7.pom
+Source1  : https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.10.3/scala-library-2.10.3.pom
+Source2  : https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.10.4/scala-library-2.10.4.jar
+Source3  : https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.10.4/scala-library-2.10.4.pom
+Source4  : https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.pom
+Source5  : https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12.jar
+Source6  : https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12.pom
+Source7  : https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.11.6/scala-library-2.11.6.jar
+Source8  : https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.11.6/scala-library-2.11.6.pom
+Source9  : https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.jar
+Source10  : https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.pom
+Source11  : https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.12.0/scala-library-2.12.0.jar
+Source12  : https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.12.0/scala-library-2.12.0.pom
+Source13  : https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.12.7/scala-library-2.12.7.jar
+Source14  : https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.12.7/scala-library-2.12.7.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0 BSD-3-Clause
@@ -29,6 +38,7 @@ data components for the mvn-scala-library package.
 
 
 %prep
+%setup -q -n META-INF
 
 %build
 
@@ -36,20 +46,47 @@ data components for the mvn-scala-library package.
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.10.6
 cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
 
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.10.3
+cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.10.3/scala-library-2.10.3.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.10.4
+cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.10.4/scala-library-2.10.4.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.10.4
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.10.4/scala-library-2.10.4.pom
+
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.10.6
-cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.pom
+cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.11.12
+cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.11.12
+cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.11.6
+cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.11.6/scala-library-2.11.6.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.11.6
+cp %{SOURCE8} %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.11.6/scala-library-2.11.6.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.11.7
+cp %{SOURCE9} %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.11.7
+cp %{SOURCE10} %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.12.0
-cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.12.0/scala-library-2.12.0.jar
+cp %{SOURCE11} %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.12.0/scala-library-2.12.0.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.12.0
-cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.12.0/scala-library-2.12.0.pom
+cp %{SOURCE12} %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.12.0/scala-library-2.12.0.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.12.7
-cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.12.7/scala-library-2.12.7.jar
+cp %{SOURCE13} %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.12.7/scala-library-2.12.7.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.12.7
-cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.12.7/scala-library-2.12.7.pom
+cp %{SOURCE14} %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.12.7/scala-library-2.12.7.pom
 
 
 %files
@@ -57,8 +94,17 @@ cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-li
 
 %files data
 %defattr(-,root,root,-)
+/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.10.3/scala-library-2.10.3.pom
+/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.10.4/scala-library-2.10.4.jar
+/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.10.4/scala-library-2.10.4.pom
 /usr/share/java/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
 /usr/share/java/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.pom
+/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12.jar
+/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12.pom
+/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.11.6/scala-library-2.11.6.jar
+/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.11.6/scala-library-2.11.6.pom
+/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.jar
+/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.pom
 /usr/share/java/.m2/repository/org/scala-lang/scala-library/2.12.0/scala-library-2.12.0.jar
 /usr/share/java/.m2/repository/org/scala-lang/scala-library/2.12.0/scala-library-2.12.0.pom
 /usr/share/java/.m2/repository/org/scala-lang/scala-library/2.12.7/scala-library-2.12.7.jar
