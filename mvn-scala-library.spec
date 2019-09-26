@@ -4,7 +4,7 @@
 #
 Name     : mvn-scala-library
 Version  : 1
-Release  : 3
+Release  : 4
 URL      : https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
 Source0  : https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
 Source1  : https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.10.3/scala-library-2.10.3.pom
@@ -23,6 +23,8 @@ Source13  : https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.
 Source14  : https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.12.3/scala-library-2.12.3.pom
 Source15  : https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.12.7/scala-library-2.12.7.jar
 Source16  : https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.12.7/scala-library-2.12.7.pom
+Source17  : https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.12.8/scala-library-2.12.8.jar
+Source18  : https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.12.8/scala-library-2.12.8.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0 BSD-3-Clause
@@ -96,6 +98,12 @@ cp %{SOURCE15} %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-l
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.12.7
 cp %{SOURCE16} %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.12.7/scala-library-2.12.7.pom
 
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.12.8
+cp %{SOURCE17} %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.12.8/scala-library-2.12.8.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.12.8
+cp %{SOURCE18} %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.12.8/scala-library-2.12.8.pom
+
 
 %files
 %defattr(-,root,root,-)
@@ -119,3 +127,5 @@ cp %{SOURCE16} %{buildroot}/usr/share/java/.m2/repository/org/scala-lang/scala-l
 /usr/share/java/.m2/repository/org/scala-lang/scala-library/2.12.3/scala-library-2.12.3.pom
 /usr/share/java/.m2/repository/org/scala-lang/scala-library/2.12.7/scala-library-2.12.7.jar
 /usr/share/java/.m2/repository/org/scala-lang/scala-library/2.12.7/scala-library-2.12.7.pom
+/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.12.8/scala-library-2.12.8.jar
+/usr/share/java/.m2/repository/org/scala-lang/scala-library/2.12.8/scala-library-2.12.8.pom
